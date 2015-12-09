@@ -1,5 +1,6 @@
 package wang.gagalulu.blog;
 
+import org.apache.log4j.Logger;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -15,10 +16,13 @@ import javax.servlet.http.HttpServletResponse;
 @RequestMapping("/firstTest")
 public class FirstTest {
 
+    public static final Logger logger = Logger.getLogger(FirstTest.class);
+
     @RequestMapping(value="/index" , method = RequestMethod.GET)
     public String testIndex(HttpServletRequest request,HttpServletResponse response, Model model){
         model.addAttribute("name","test");
         request.setAttribute("aaa","123");
+        logger.info("这里有一次访问");
         return "index";
     }
 }
