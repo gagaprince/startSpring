@@ -60,7 +60,9 @@
       <groupId>net.sf.json-lib</groupId>
       <artifactId>json-lib</artifactId>
       <version>2.4</version>
+      <classifier>jdk15</classifier>
     </dependency>
+
 
     <!-- 导入mysql-->
 
@@ -136,6 +138,8 @@
         <!-- or if you want to use tomcat 6.x <artifactId>tomcat6-maven-plugin</artifactId> -->
         <version>2.0</version>
         <configuration>
+          <warFile>${project.build.directory}/blog.war</warFile>
+          <warSourceDirectory>StartSpring</warSourceDirectory>
           <contextReloadable>false</contextReloadable>
           <contextFile>D:\tools\apache-tomcat-7.0.26\conf\context.xml
           </contextFile>
@@ -170,3 +174,4 @@
     </plugins>
   </build>
 </project>
+<!--这种方式只能用来在打包时候替换 但是正常的开发时 却运行不起来-->

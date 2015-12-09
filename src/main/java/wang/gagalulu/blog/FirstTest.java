@@ -22,7 +22,7 @@ public class FirstTest {
     public String testIndex(HttpServletRequest request,HttpServletResponse response, Model model){
         model.addAttribute("name","test");
         request.setAttribute("aaa","123");
-        logger.info("ÕâÀïÓĞÒ»´Î·ÃÎÊ");
+        logger.info("è¿™é‡Œä¸€æ¬¡è¯·æ±‚");
         return "index";
     }
 }
