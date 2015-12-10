@@ -5,7 +5,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-
+ 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
@@ -22,7 +22,7 @@ public class FirstTest {
     public String testIndex(HttpServletRequest request,HttpServletResponse response, Model model){
         model.addAttribute("name","test");
         request.setAttribute("aaa","123");
-        logger.info("这里一次请求");
+        logger.info("这是一次请求");
         return "index";
     }
 }
